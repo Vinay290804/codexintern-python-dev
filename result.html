@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        .result-box { border: 1px solid #ddd; padding: 15px; margin: 20px 0; }
+        .positive { color: green; }
+        .negative { color: red; }
+        .neutral { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <div class="result-box">
+        <h3>Original Text:</h3>
+        <p>{{ text }}</p>
+        
+        <h3>Sentiment: <span class="{{ sentiment.lower() }}">{{ sentiment }}</span></h3>
+        <p>Polarity Score: {{ polarity }} (range: -1 to 1)</p>
+        <p>Subjectivity Score: {{ subjectivity }} (range: 0 to 1)</p>
+    </div>
+    <a href="/">Analyze another text</a>
+</body>
+</html>
